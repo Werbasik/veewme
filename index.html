@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>VeewMe</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="mediamodal.js"></script>
+    <script src="revealFilter.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav id="top-menu">
+            <div class="top-menu-container">
+                <button class="top-menu-button">New Order</button>
+                <button class="top-menu-button">New Client</button>
+                <button class="top-menu-button">Jobs report...</button>
+                <button class="top-menu-user-button"><i class="fa fa-user-o" aria-hidden="true"></i> Chester Tester </button>
+
+            </div>
+
+        </nav>
+        <nav id="menu">
+            <ul>
+                <img class="logo" src="img/veewme-logo.svg">
+                <li class="home"><a href="#">Clients</a></li>
+                <li class="home"><a class="active" href="#">Orders</a></li>
+                <li class="home"><a href="#">Dashboard</a></li>
+                <li class="home"><a href="#">Media Access</a></li>
+                <li class="home"><a href="#">Promo Codes</a></li>
+                <li class="home"><a href="#">Photographers</a></li>
+                <li class="home"><a href="#">Tour Banners</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+    <div class="submenu-container">
+        <h2 class="heading">Orders</h2>
+    </div>
+
+
+
+    <div class="filter-container">
+        <div class="show-filter-icon" id="filterSwitch">
+            <i class="fa fa-search" aria-hidden="true"></i> Search orders</div>
+        <div id="filter-field" class="filter-field">
+            <button class="filter-btn">Reset</button>
+            <button class="filter-btn" onclick="$(this).toggleClass('btn-active');">All</button>
+            <button class="filter-btn" onclick="$(this).toggleClass('btn-active');">Pending</button>
+            <button class="filter-btn" onclick="$(this).toggleClass('btn-active');">Media Only</button>
+            <select>
+              <option selected disabled>Client...</option>
+               <option>Client 1</option>
+               <option>Client 2</option>
+           </select>
+            <select>
+              <option selected disabled>Photographer...</option>
+               <option>Client 1</option>
+               <option>Client 2</option>
+           </select>
+
+            <input type="text" placeholder="Tour address..." />
+            <input type="text" placeholder="Tour ID..." />
+            <input type="date" />
+            <label><input type="checkbox"><span></span> Video</label>
+            <label><input type="checkbox"><span></span> Interactive</label>
+            <label><input type="checkbox"><span></span> Panorama</label>
+
+
+        </div>
+
+
+    </div>
+    <!--   End of filter container-->
+
+    <div class="offer-background">
+        <div class="offer-container">
+            <div class="item1">
+               <div class="view-icon"><i class="fa fa-play-circle-o" aria-hidden="true"></i> View </div>
+                <div class="offer-title">
+                    123 Test Street Hollywood, CA 90210 Tour ID:78881
+                </div>
+                <img src="img/house1.jpg">
+            </div>
+            <div class="item2">
+                <ul>
+                    <li>Actions:</li>
+                    <li class="manage-media-link"> Add/Manage Media</li>
+                    <li> Assign/Schedule Shot</li>
+                    <li> Set Tour Bannert</li>
+                    <li>Purchase Add-on Services</li>
+                    <li> Edit Property</li>
+                    <li>Assess Admin Fee</li>
+                    <li>Syndication</li>
+                    <li>Access Media</li>
+                    <li>Show Tour Statistics</li>
+                </ul>
+            </div>
+            <div class="item3">
+                <p><span class="desc-item">Sq.Ft./Sq.Meters:</span> 2500</p>
+                <p><span class="desc-item">Beds/Baths:</span> 4/3(+2)</p>
+                <p><span class="desc-item">ML#:</span> 123</p>
+                <p><span class="desc-item">Order Date:</span> 01/13/18</p>
+                <button class="offer-button">Show order details</button>
+                <button class="offer-button">Activate </button>
+                <button class="offer-button"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete order </button>
+            </div>
+
+            <div class="item4">
+                <p><span class="desc-item">Agent:</span>  Natalie Wood</p>
+                <p><span class="desc-item">Office:</span>  +1 734-485-0818</p>
+                <p><span class="desc-item">Mobile:</span>  +1 734-485-0818</p>
+            </div>
+
+        </div>
+    </div>
+    <!--end of offer backgroud-->
+    <div class="offer-background">
+        <div class="offer-container">
+            <div class="item1">
+               <div class="view-icon"><i class="fa fa-play-circle-o" aria-hidden="true"></i> View </div>
+                <div class="offer-title">
+                    123 Test Street Hollywood, CA 90210 Tour ID:78881
+                </div>
+                <img src="img/house2.jpg">
+            </div>
+            <div class="item2">
+                <ul>
+                    <li>Actions:</li>
+                    <li class="manage-media-link"> Add/Manage Media</li>
+                    <li> Assign/Schedule Shot</li>
+                    <li> Set Tour Bannert</li>
+                    <li>Purchase Add-on Services</li>
+                    <li> Edit Property</li>
+                    <li>Assess Admin Fee</li>
+                    <li>Syndication</li>
+                    <li>Access Media</li>
+                    <li>Show Tour Statistics</li>
+                </ul>
+            </div>
+            <div class="item3">
+                <p><span class="desc-item">Sq.Ft./Sq.Meters:</span> 2500</p>
+                <p><span class="desc-item">Beds/Baths:</span> 4/3(+2)</p>
+                <p><span class="desc-item">ML#:</span> 123</p>
+                <p><span class="desc-item">Order Date:</span> 01/13/18</p>
+                <button class="offer-button">Show order details</button>
+                <button class="offer-button">Activate </button>
+                <button class="offer-button"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete order </button>
+            </div>
+
+            <div class="item4">
+                <p><span class="desc-item">Agent:</span>  Natalie Wood</p>
+                <p><span class="desc-item">Office:</span>  +1 734-485-0818</p>
+                <p><span class="desc-item">Mobile:</span>  +1 734-485-0818</p>
+            </div>
+
+        </div>
+    </div>
+    <!--end of offer backgroud-->
+    <div class="offer-background">
+        <div class="offer-container">
+            <div class="item1">
+               <div class="view-icon"><i class="fa fa-play-circle-o" aria-hidden="true"></i> View </div>
+                <div class="offer-title">
+                    123 Test Street Hollywood, CA 90210 Tour ID:78881
+                </div>
+                <img src="img/house3.jpg">
+            </div>
+            <div class="item2">
+                <ul>
+                    <li>Actions:</li>
+                    <li class="manage-media-link"> Add/Manage Media</li>
+                    <li> Assign/Schedule Shot</li>
+                    <li> Set Tour Bannert</li>
+                    <li>Purchase Add-on Services</li>
+                    <li> Edit Property</li>
+                    <li>Assess Admin Fee</li>
+                    <li>Syndication</li>
+                    <li>Access Media</li>
+                    <li>Show Tour Statistics</li>
+                </ul>
+            </div>
+            <div class="item3">
+                <p><span class="desc-item">Sq.Ft./Sq.Meters:</span> 2500</p>
+                <p><span class="desc-item">Beds/Baths:</span> 4/3(+2)</p>
+                <p><span class="desc-item">ML#:</span> 123</p>
+                <p><span class="desc-item">Order Date:</span> 01/13/18</p>
+                <button class="offer-button">Show order details</button>
+                <button class="offer-button">Activate </button>
+                <button class="offer-button"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete order </button>
+            </div>
+
+            <div class="item4">
+                <p><span class="desc-item">Agent:</span>  Natalie Wood</p>
+                <p><span class="desc-item">Office:</span>  +1 734-485-0818</p>
+                <p><span class="desc-item">Mobile:</span>  +1 734-485-0818</p>
+            </div>
+
+        </div>
+    </div>
+    <!--end of offer backgroud-->
+    <div class="offer-background">
+        <div class="offer-container">
+            <div class="item1">
+               <div class="view-icon"><i class="fa fa-play-circle-o" aria-hidden="true"></i> View </div>
+                <div class="offer-title">
+                    123 Test Street Hollywood, CA 90210 Tour ID:78881
+                </div>
+                <img src="img/house4.jpg">
+            </div>
+            <div class="item2">
+                <ul>
+                    <li>Actions:</li>
+                    <li class="manage-media-link"> Add/Manage Media</li>
+                    <li> Assign/Schedule Shot</li>
+                    <li> Set Tour Bannert</li>
+                    <li>Purchase Add-on Services</li>
+                    <li> Edit Property</li>
+                    <li>Assess Admin Fee</li>
+                    <li>Syndication</li>
+                    <li>Access Media</li>
+                    <li>Show Tour Statistics</li>
+                </ul>
+            </div>
+            <div class="item3">
+                <p><span class="desc-item">Sq.Ft./Sq.Meters:</span> 2500</p>
+                <p><span class="desc-item">Beds/Baths:</span> 4/3(+2)</p>
+                <p><span class="desc-item">ML#:</span> 123</p>
+                <p><span class="desc-item">Order Date:</span> 01/13/18</p>
+                <button class="offer-button">Show order details</button>
+                <button class="offer-button">Activate </button>
+                <button class="offer-button"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete order </button>
+            </div>
+
+            <div class="item4">
+                <p><span class="desc-item">Agent:</span>  Natalie Wood</p>
+                <p><span class="desc-item">Office:</span>  +1 734-485-0818</p>
+                <p><span class="desc-item">Mobile:</span>  +1 734-485-0818</p>
+            </div>
+
+        </div>
+    </div>
+    <!--end of offer backgroud-->
+
+    
+
+
+
+
+
+
+
+
+    <div class="pagination p1">
+        <ul>
+            <a href="#">
+                <li>
+                    <</li>
+            </a>
+            <a class="is-active" href="#">
+                <li>1</li>
+            </a>
+            <a href="#">
+                <li>2</li>
+            </a>
+            <a href="#">
+                <li>3</li>
+            </a>
+            <a href="#">
+                <li>4</li>
+            </a>
+            <a href="#">
+                <li>5</li>
+            </a>
+            <a href="#">
+                <li>6</li>
+            </a>
+            <a href="#">
+                <li>></li>
+            </a>
+        </ul>
+    </div>
+
+    <div class="help-icon-wrapper">
+        <img src="data:image/png;base64,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">
+
+    </div>
+
+
+
+    <!-- Modal offers -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Media management <span class="modal-header-title">123 Test Street Hollywood, CA 90210</span></h2>
+                <nav id="menu" class="modal-menu">
+                    <ul>
+                        <li class="home"><a class="active" href="#">Photos</a></li>
+                        <li class="home"><a href="#">Video</a></li>
+                        <li class="home"><a href="#">Interactive</a></li>
+                        <li class="home"><a href="#">Panoramas</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="modal-body">
+
+                <h3>Upload photos</h3>
+                <div class="modal-dragndropfield">
+                    <h4><i class="fa fa-plus" aria-hidden="true"></i> Drag & drop or click here to add files</h4>
+                </div>
+                <h3>Tour photos</h3>
+                <div class="offer-modal-panel">
+                    <div class="offer-modal-panel-left">
+                        Select photo quanity in Tour Overview <select> 
+           <option selected>10
+           </option>
+           </select>
+                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                    </div>
+                    <div class="offer-modal-panel-right">
+                        <label><input type="checkbox"><span></span> Slideshow on Tour overview</label>
+                        <br>
+                        <label><input type="checkbox"><span></span> Mute music as default</label> <br> Select music for Slideshows:
+                        <select>
+           <option selected>Road to home</option>
+           </select>
+                        <button class="modal-button">Preview</button>
+                    </div>
+
+
+                </div>
+
+                <div class="modal-image-container">
+                    <div class="modal-image-wrapper"><img src="img/house5.jpg">
+                        <div class="modal-image-overlay"></div>
+                    </div>
+                    <div class="modal-image-wrapper"><img src="img/house5.jpg">
+                        <div class="modal-image-overlay"></div>
+                    </div>
+                    <div class="modal-image-wrapper"><img src="img/house5.jpg">
+                        <div class="modal-image-overlay"></div>
+                    </div>
+                    <div class="modal-image-wrapper"><img src="img/house5.jpg">
+                        <div class="modal-image-overlay"></div>
+                    </div>
+                    <div class="modal-image-wrapper"><img src="img/house5.jpg">
+                        <div class="modal-image-overlay"></div>
+                    </div>
+                    <div class="modal-image-wrapper"><img src="img/house5.jpg">
+                        <div class="modal-image-overlay"></div>
+                    </div>
+                    <div class="modal-image-wrapper"><img src="img/house5.jpg">
+                        <div class="modal-image-overlay"></div>
+                    </div>
+                    <div class="modal-image-wrapper"><img src="img/house5.jpg">
+                        <div class="modal-image-overlay"></div>
+                    </div>
+                    <div class="modal-image-wrapper"><img src="img/house5.jpg">
+                        <div class="modal-image-overlay"></div>
+                    </div>
+                    <div class="modal-image-wrapper"><img src="img/house5.jpg">
+                        <div class="modal-image-overlay"></div>
+                    </div>
+                    <div class="modal-image-wrapper"><img src="img/house5.jpg">
+                        <div class="modal-image-overlay"></div>
+                    </div>
+                    <div class="modal-image-wrapper"><img src="img/house5.jpg">
+                        <div class="modal-image-overlay"></div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- End of modal offers -->
+
+
+
+</body>
+
+</html>
