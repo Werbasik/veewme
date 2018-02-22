@@ -349,6 +349,7 @@ margin-left: 300px
 
 .item2 ul li {
     padding-top: 4px;
+/*    background-color: #FEC300;*/
     background-color: #09c;
     border-bottom: 1px solid white;
     color: white;
@@ -383,8 +384,9 @@ margin-left: 300px
     margin-top: 8px;
     width: 80%;
     border: 1px solid transparent;
-    background-color: #C90062;
-/*    background-color:  #FEC300;*/
+
+/*    background-color: #C90062;*/
+   background-color:  #FEC300;
 /*    background-color: #1B2D57;*/
     color: #F8F8F8;
     height: 23px;
