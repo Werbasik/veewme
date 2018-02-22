@@ -352,7 +352,8 @@ margin-left: 300px
 .item2 ul li {
     padding-top: 4px;
 /*    background-color: #FEC300;*/
-    background-color: #09c;
+    background-color: rgba( 0, 0, 0, 0.6);
+/*    background-color: #09c;*/
     border-bottom: 1px solid white;
     color: white;
         transition: all 200ms ease-in-out;
