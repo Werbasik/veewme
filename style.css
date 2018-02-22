@@ -5,7 +5,7 @@
 html {
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
-    
+
 }
 
 body {
@@ -126,7 +126,7 @@ header #menu {
 
 #filter-field {
     font-size: 15px;
-    
+
     display: none;
 
 }
@@ -257,6 +257,7 @@ label span {
     /*    grid-row: 1 / span 2;*/
     border-radius: 5px;
     position: relative;
+    z-index: 9999;
 }
 
 .view-icon {
@@ -307,11 +308,26 @@ label span {
 .item2 {
     text-align: left;
     font-size: 13px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Roboto";
     color: #1B2D57;
     width: 250px;
+    border: 1px solid rgba( 211, 211, 211, 0.451);
+    border-color: #F8F8F8;
+margin-left: 300px
+    transition: all 400ms ease-in;
+   
 
 }
+
+/*
+.actions{
+    position: absolute;
+    top: 100px;
+    left: 300px;
+    z-index: 9999;
+    color: red;
+}
+*/
 
 .item2 ul {
     box-sizing: border-box;
@@ -319,27 +335,41 @@ label span {
     padding-left: 8px;
     margin-bottom: 0;
     margin-top: 0;
-    height: 200px;
-    padding-top: 10px;
+    height: 204px;
+    padding-top: 0;
+    padding-left: 0;
     width: 250px;
-    border-right: 1px solid rgba( 211, 211, 211, 0.451);
+    /*    border-right: 1px solid rgba( 211, 211, 211, 0.451);*/
+    /*
     border-color: #F8F8F8;
+*/
+    text-align: center;
+    
+}
 
-
-
+.item2 ul li {
+    padding-top: 4px;
+    background-color: #09c;
+    border-bottom: 1px solid white;
+    color: white;
+        transition: all 200ms ease-in-out;
+    padding-bottom: 4px;
+    height: 22.22px;
 
 }
 
+
+
+
+/*
 .item2 ul li:first-child {
     color: #1B2D57;
     font-weight: 700;
     font-size: 14px;
 }
+*/
 
-.item2 ul li {
-    transition: all 200ms ease-in-out;
-    padding-bottom: 5px;
-}
+
 
 .item2 ul li:hover {
     font-weight: 700;
@@ -353,7 +383,9 @@ label span {
     margin-top: 8px;
     width: 80%;
     border: 1px solid transparent;
-    background-color: #1B2D57;
+    background-color: #C90062;
+/*    background-color:  #FEC300;*/
+/*    background-color: #1B2D57;*/
     color: #F8F8F8;
     height: 23px;
     border-radius: 5px;
