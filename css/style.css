@@ -1,0 +1,801 @@
+/*
+#005E19
+
+//#359898
+#A13D32
+#F1F634
+#19BDC7
+#E00C70
+#253342
+#05746A
+#1A9F2F
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../img/ecailles.png);
+}
+
+.navbar-global {
+    background-color: ghostwhite;
+    height: 60px;
+}
+
+.navbar-global .navbar-brand {
+    color: 212453;
+    font-family: 'Roboto Condensed', sans-serif
+}
+
+.navbar-global .navbar-user>li>a {
+    color: #D41F89;
+}
+
+.navbar-primary {
+    background-color: #fff;
+    bottom: 0px;
+    left: 0px;
+    position: fixed;
+    top: 46px;
+    width: 180px;
+    margin-top: 14px;
+    height: 90%;
+    z-index: 7;
+    overflow: hidden;
+    /*   border:solid 1px #666;*/
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.top-menu-button {
+    padding: 4px;
+    background-color: #929dad;
+    color: white;
+    box-shadow: none;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+body>div>div.submenu-container>h2 {
+    margin-top: 60px;
+    font-family: 'Ubuntu';
+}
+
+.filter-container {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.show-filter-icon {
+    cursor: pointer;
+    display: inline-block;
+    user-select: none;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 30px;
+}
+
+#filter-field {
+    font-size: 15px;
+    display: none;
+}
+
+.filter-btn {
+    border: 1px solid #32CD32;
+    background-color: white;
+    border-radius: 2px;
+    outline-color: #32CD32;
+    ;
+    font-size: 15px;
+    margin-top: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Ubuntu';
+}
+
+.filter-btn:active {
+    border: 1px solid rgba(159, 204, 62, 1);
+    background-color: rgba(159, 204, 62, 1);
+    color: white;
+}
+
+.btn-active {
+    background-color: rgba(159, 204, 62, 1);
+    border: 1px solid rgba(159, 204, 62, 1);
+    color: white;
+}
+
+select {
+    border: 1px solid #32CD32;
+    background-color: white;
+    border-radius: 2px;
+    outline-color: #32CD32;
+    font-size: 15px;
+    margin-top: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Ubuntu';
+}
+
+input[type=text],
+input[type=date] {
+    border: 1px solid #32CD32;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 2px;
+    outline-color: #32CD32;
+    ;
+    font-size: 15px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Ubuntu';
+}
+
+input[type=date] {
+    height: 30px;
+}
+
+label input {
+    display: none;
+    /* <-- hide the default checkbox */
+}
+
+label span {
+    /* <-- style the artificial checkbox */
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    font-family: 'Roboto';
+    margin-left: 10px;
+}
+
+[type=checkbox]:checked+span:before {
+    content: '\2714';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    color: #223855;
+    transform: scale(1.5);
+}
+
+
+/*END OF FILTER*/
+
+.offer-background {
+    /*    background-color:  #1A9F2F;*/
+    max-width: 1150px;
+    margin: 0 auto;
+    /*
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+*/
+}
+
+.offer-container {
+    background-color: white;
+    max-width: 1150px;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 300px auto auto auto;
+    grid-gap: 0px;
+    /*    max-height: 300px;*/
+    /*    border-radius: 5px;*/
+    overflow: hidden;
+    transition: all 400ms ease-in-out;
+}
+
+
+/*
+.offer-container:hover {
+    box-shadow: 0 10px 17px rgba(159, 204, 62, 0.7);
+    transform: translate3d(3px, -5px, 0);
+}
+*/
+
+.item1 {
+    grid-row: 1 / span 2;
+    border-radius: 5px;
+    position: relative;
+}
+
+div.view-icon {
+    position: absolute;
+    color: white;
+    cursor: pointer;
+    transform: translate(130px, 80px);
+}
+
+.offer-title {
+    position: absolute;
+    bottom: 5px;
+    border-top-left-radius: 5px;
+    max-width: 300px;
+    width: 300px;
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-top: 5px;
+    background-color: rgba( 0, 0, 0, 0.6);
+    font-size: 12px;
+    color: white;
+}
+
+.item1 img {
+    border-top-left-radius: 4px;
+    width: 300px;
+}
+
+.item2,
+.item3,
+.item4 {
+    line-height: 1;
+    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.item2 p,
+.item3 p,
+.item4 p {
+    margin-top: 8px;
+    margin-bottom: 3px;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.item-delete {
+    text-align: center;
+}
+
+.item-delete button {
+    /*
+    display: inline-block;
+    margin-top: 60px;
+    background-color: #09c;
+    padding: 10px;
+    color: white;
+    border-radius: 30px;
+    font-family: 'Ubuntu';
+*/
+    box-sizing: border-box;
+    appearance: none;
+    background-color: #C90062;
+    color: white;
+   border: 2px solid #09c;
+    border-radius: 0.6em;
+/*    color: $red;*/
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    font-size: 1rem;
+    line-height: 1;
+    margin-top: 67px;
+    margin-left: 63px;
+    padding: 12px;
+    text-decoration: none;
+    text-align: center;
+   text-transform: uppercase;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    &:hover,
+    &:focus {
+        color: #fff;
+        outline: 0;
+    }
+}
+
+
+
+.grid-menu {
+    grid-area: 2 / 2 /2 / 5;
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-gap: 0px;
+    max-height: 60px;
+}
+
+.menu-item {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 300;
+    background-color: #D3E3E7;
+    max-height: 30px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #4C439C;
+    transition: all 400ms ease-in-out;
+}
+
+.menu-item:first-of-type:hover {
+    background-color: #223855;
+    color: #04186A;
+    cursor: default;
+}
+
+.menu-item:hover {
+    background-color: #C4E94D;
+    cursor: pointer;
+    color: #223855;
+}
+
+.btn-active {
+    background-color: rgba(159, 204, 62, 1);
+    border: 1px solid rgba(159, 204, 62, 1);
+    color: white;
+}
+
+input[type=date] {
+    height: 30px;
+}
+
+label input {
+    display: none;
+    /* <-- hide the default checkbox */
+}
+
+label span {
+    /* <-- style the artificial checkbox */
+    /*
+    height: 10px;
+    width: 10px;
+*/
+    /*    border: 1px solid rgba( 188, 188, 188, 0.454);*/
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    font-family: 'Ubuntu';
+    margin-left: 10px;
+    font-size: 13px;
+}
+
+[type=checkbox]:checked+span:before {
+    content: '\2714';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    color: #223855;
+    transform: scale(1.5);
+}
+
+.profilepicture-wrapper {
+    margin-top: 40px;
+    text-align: center;
+}
+
+body>nav.navbar-primary>div>div>img {
+    border-radius: 50%;
+    transition: all 200ms ease-in-out;
+}
+
+body>nav.navbar-primary>div>div>span {
+    display: block;
+}
+
+.profile button {
+    font-size: 12px;
+}
+
+.navbar-primary.collapsed {
+    width: 60px;
+}
+
+.navbar-primary.collapsed .glyphicon {
+    font-size: 22px;
+}
+
+.navbar-primary.collapsed .nav-label,
+.navbar-primary.collapsed div>div>span,
+.navbar-primary.collapsed .profile button {
+    display: none;
+}
+
+.navbar-primary.collapsed div>div>img {
+    border-radius: 0;
+}
+
+.btn-expand-collapse {
+    position: absolute;
+    display: block;
+    left: 0px;
+    bottom: 0;
+    width: 100%;
+    padding: 8px 0;
+    /*    border-top:solid 1px #666;*/
+    color: grey;
+    font-size: 20px;
+    text-align: center;
+}
+
+.btn-expand-collapse:hover,
+.btn-expand-collapse:focus {
+    background-color: #EC7A08;
+    color: white;
+}
+
+.btn-expand-collapse:active {
+    background-color: #EC7A08;
+}
+
+.navbar-primary-menu,
+.navbar-primary-menu li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar-primary-menu li .one {
+    display: block;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 16px 21px;
+    text-align: left;
+    /*  border-bottom:solid 1px #444;*/
+    color: #58A618;
+    margin-top: 20px;
+    top: 30px;
+}
+
+.navbar-primary-menu li .one:hover {
+    background-color: #58A618;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-primary-menu li .two {
+    display: block;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 16px 21px;
+    text-align: left;
+    /*  border-bottom:solid 1px #444;*/
+    color: #09c;
+    margin-top: 20px;
+    top: 30px;
+}
+
+.navbar-primary-menu li .two:hover {
+    background-color: #58A618;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-primary-menu li .three {
+    display: block;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 16px 21px;
+    text-align: left;
+    /*  border-bottom:solid 1px #444;*/
+    color: #C90062;
+    margin-top: 20px;
+    top: 30px;
+}
+
+.navbar-primary-menu li .three:hover {
+    background-color: #58A618;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-primary-menu li .four {
+    display: block;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 16px 21px;
+    text-align: left;
+    /*  border-bottom:solid 1px #444;*/
+    color: .navbar-primary-menu li .three 
+    display: block;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 16px 21px;
+    text-align: left;
+    /*  border-bottom:solid 1px #444;*/
+    color: #EC7A08; 
+    margin-top: 20px;
+    top: 30px;
+}
+
+.navbar-primary-menu li .three:hover {
+    background-color: #58A618;
+    text-decoration: none;
+    color: white;
+};
+    margin-top: 20px;
+    top: 30px;
+}
+
+.navbar-primary-menu li .four:hover {
+    background-color: #58A618;
+    text-decoration: none;
+    color: white;
+}
+
+
+.navbar-primary-menu li a {
+    display: block;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 16px 21px;
+    text-align: left;
+    /*  border-bottom:solid 1px #444;*/
+    color: dimgrey;
+    margin-top: 20px;
+    top: 30px;
+}
+
+.navbar-primary-menu li a:hover {
+    background-color: #58A618;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-primary-menu li a .glyphicon {
+    margin-right: 6px;
+}
+
+.navbar-primary-menu li a:hover .glyphicon {
+    color: orchid;
+    padding: 16px 30px;
+}
+
+.main-content {
+    margin-top: 60px;
+    margin-left: 200px;
+    padding: 20px;
+}
+
+.offer-background {
+    /*    background-color: #9ACD32;*/
+    /*    background-color:#212453;*/
+    max-width: 1150px;
+    margin: 0 auto;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.offer-container {
+    background-color: white;
+    max-width: 1150px;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 300px auto auto auto;
+    grid-gap: 0px;
+    max-height: 200px;
+    /*    border-radius: 5px;*/
+    overflow: hidden;
+    /*    transition: all 400ms ease-in-out;*/
+    border-bottom: 2px solid #32CD32;
+}
+
+
+/*.offer-container:hover {
+   box-shadow: 0 10px 17px rgba(159, 204, 62, 0.7);
+   transform: translate3d(3px, -5px, 0);
+}
+*/
+
+.item1 {
+    grid-row: 1 / span 2;
+    border-radius: 5px;
+    position: relative;
+}
+
+.offer-title {
+    position: absolute;
+    bottom: 0px;
+    border-top-left-radius: 5px;
+    max-width: 300px;
+    width: 300px;
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-top: 5px;
+    background-color: rgba( 0, 0, 0, 0.6);
+    font-size: 12px;
+    color: white;
+}
+
+
+/*
+.item1 img {
+    border-top-left-radius: 4px;
+}
+*/
+
+.item2,
+.item3,
+.item4 {
+    line-height: 1;
+    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.item2 p,
+.item3 p,
+.item4 p {
+    margin-top: 16px;
+    margin-bottom: 3px;
+    font-size: 15px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.item5 {
+    grid-area: 2 / 2 /2 / 5;
+    background-color: #B6EE7B;
+    text-align: center;
+    color: #46176A;
+}
+
+.item5 ul li {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 13px;
+    font-weight: 700;
+    border: 1px solid transparent;
+    margin-top: 4px;
+    padding: 4px;
+    border-radius: 3px;
+}
+
+.grid-menu {
+    grid-area: 2 / 2 /2 / 5;
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-gap: 0px;
+    max-height: 60px;
+}
+
+.menu-item {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 300;
+    background-color: #D3E3E7;
+    max-height: 20px;
+    line-height: 10px;
+    font-weight: 700;
+    color: #4C439C;
+    transition: all 400ms ease-in-out;
+}
+
+.menu-item:first-of-type:hover {
+    background-color: #223855;
+    color: #04186A;
+    cursor: default;
+}
+
+.menu-item:hover {
+    background-color: #C4E94D;
+    cursor: pointer;
+    color: #223855;
+}
+
+
+/*start nav menu*/
+
+.clear {
+    clear: both;
+}
+
+.slide-toggle {
+    display: none;
+}
+
+.slidemenu {
+    font-family: 'Ubuntu';
+    padding: 0;
+    overflow: hidden;
+    margin-top: 0;
+    margin-bottom: 25px;
+    background-color: whitesmoke;
+}
+
+.slidemenu label {
+    width: 200px;
+    display: inline-block;
+    color: #2F4F4F;
+    text-align: left;
+    padding: 0 auto;
+    margin-left: 2px;
+    font-size: 13px;
+}
+
+.slidemenu label .fa {
+    margin-left: 10px;
+}
+
+
+/*
+  width: 20%;
+  text-align: center;
+  display: inline-block;
+  float: left;
+  color: #333;
+  opacity: 0.2;
+     padding: 3px 3px;
+    margin-left: 25px;
+*/
+
+
+}
+.slidemenu label:hover {
+    cursor: pointer;
+    color: #696969;
+}
+.slidemenu label span {
+    display: inline-block;
+    list-style-position: inside;
+    /*  padding: 10px;    */
+}
+.slidemenu label .icon {
+    font-size: 10px;
+    border: solid 2px #333;
+    height: 10px;
+    width: 10px;
+    display: inline;
+    margin: 0 auto;
+    line-height: 10px;
+    border-radius: 50%;
+}
+Bar Style
+/*
+.slider {
+    width: 100%;
+    height: 5px;
+    display: block;
+    background: #ccc;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.slider .bar {
+    width: 10%;
+    height: 5px;
+    background: #333;
+    border-radius: 5px;
+}
+
+
+Animations
+
+.slidemenu label,
+.slider .bar {
+    transition: all 500ms ease-in-out;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+}
+*/
+
+/*Toggle*/
+.slidemenu .slide-toggle:checked+label {
+    opacity: 1;
+}
+.slidemenu #slide-item-1:checked~.slider .bar {
+    margin-left: 0;
+}
+.slidemenu #slide-item-2:checked~.slider .bar {
+    margin-left: 25%;
+}
+.slidemenu #slide-item-3:checked~.slider .bar {
+    margin-left: 50%;
+}
+
+/*
+
+.slidemenu #slide-item-4:checked~.slider .bar {
+    margin-left: 75%;
+}
+*/
+
+/*end nav menu*/
